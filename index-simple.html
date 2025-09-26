@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 圖像文字增強系統</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen flex items-center justify-center">
+    <div class="max-w-2xl mx-auto p-8 text-center">
+        <h1 class="text-4xl font-bold text-slate-800 mb-4">🚀 AI 圖像文字增強系統</h1>
+        <p class="text-lg text-slate-600 mb-8">部署成功！正在載入完整應用...</p>
+        
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-4">系統狀態</h2>
+            <div class="space-y-2">
+                <div class="flex justify-between items-center">
+                    <span>GitHub Pages</span>
+                    <span class="text-green-600">✅ 運行中</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span>前端應用</span>
+                    <span class="text-blue-600">🔄 載入中</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-sm text-slate-500">
+            <p>如果應用沒有自動載入，請檢查瀏覽器控制台的錯誤訊息</p>
+            <p class="mt-2">
+                <a href="https://github.com/maotai11/Image-HD-Restoration2" 
+                   class="text-blue-600 hover:underline">查看源碼</a>
+            </p>
+        </div>
+    </div>
+    
+    <div id="root"></div>
+    
+    <script type="module">
+        // 嘗試載入主應用
+        try {
+            import('./index.tsx').then(() => {
+                console.log('主應用載入成功');
+            }).catch(error => {
+                console.error('主應用載入失敗:', error);
+                document.querySelector('.text-blue-600').textContent = '❌ 載入失敗';
+                document.querySelector('.text-blue-600').className = 'text-red-600';
+            });
+        } catch (error) {
+            console.error('模組載入錯誤:', error);
+        }
+    </script>
+</body>
+</html>

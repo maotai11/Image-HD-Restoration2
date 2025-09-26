@@ -37,8 +37,8 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    - name: Build
-      run: npm run build
+    - name: Build for GitHub Pages
+      run: npm run build:github
       env:
         # 使用 Hugging Face Inference API 作為備用
         PADDLE_OCR_URL: https://api-inference.huggingface.co/models/PaddlePaddle/PaddleOCR
