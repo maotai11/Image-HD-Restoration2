@@ -1,0 +1,16 @@
+# PaddleOCR 相關依賴
+paddlepaddle
+paddleocr
+opencv-python
+flask
+flask-cors
+requests
+
+# Qwen-Image-Edit 相關依賴 (可選，用於完整功能)
+torch
+torchvision
+transformers
+pillow
+
+# 其他工具
+numpy

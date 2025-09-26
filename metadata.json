@@ -1,0 +1,5 @@
+{
+  "name": "Image HD Restoration",
+  "description": "An application that uses Gemini to enhance image resolution, deblur, and perform Optical Character Recognition (OCR) to extract text and its location.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,26 @@
+{
+  "name": "image-hd-restoration",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:network": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "build:github": "vite build --config vite.config.github.ts",
+    "preview": "vite preview",
+    "preview:network": "vite preview --host 0.0.0.0",
+    "start:services": "python scripts/start_services.py",
+    "start:network": "python scripts/deploy_network.py",
+    "deploy:github": "npm run build:github && gh-pages -d dist"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}
